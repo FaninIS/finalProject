@@ -1,2 +1,587 @@
-@use './modules/styles' as s;
+@use "./modules/styles" as s;
 
+html,
+body {
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper {
+	width: 75%;
+}
+.header {
+	position: relative;
+	width: 100%;
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	&__body {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		height: 100%;
+	}
+
+	&__menu {
+		padding: 2em 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__box {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-family: "montserrat", sans-serif;
+		font-size: 3.25em;
+		color: s.$titleWhiteColor;
+		text-align: center;
+	}
+
+	&__text {
+		font-family: "roboto", sans-serif;
+		font-size: 1.5em;
+		color: s.$headerTextColor;
+		text-align: center;
+		margin: 1.5em 0;
+	}
+
+	&__text::first-letter {
+		text-transform: capitalize;
+	}
+
+	&__button {
+		display: block;
+		margin: 0 auto;
+	}
+}
+.menu {
+	&__list {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__list-item {
+		margin: 0 1em;
+		display: flex;
+		align-items: center;
+
+		&_bordered {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__link {
+		display: block;
+		font-family: "montserrat", sans-serif;
+		font-size: 0.875em;
+		color: s.$titleWhiteColor;
+
+		&_bordered {
+			border-radius: 2em;
+			border: 0.08em solid s.$titleWhiteColor;
+			padding: 0.5em 1em;
+		}
+	}
+}
+
+.list {
+	@include s.listStyleNull();
+}
+
+.link {
+	@include s.listItemStyleNull();
+	text-transform: capitalize;
+}
+
+.head-link_branded {
+	font-family: "montserrat", sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: s.$titleWhiteColor;
+	font-size: 1.25em;
+}
+.text {
+}
+.btn {
+	font: {
+		family: "montserrat", sans-serif;
+		size: .875em;
+		weight: bold;
+	}
+	background-color: s.$buttonColor;
+	border: {
+		radius: 2em;
+		color: s.$buttonColor;
+	}
+	color: s.$titleWhiteColor;
+	padding: .7em 2em;
+	cursor: pointer;
+}
+
+.btn::first-letter {
+	text-transform: capitalize;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+
+	&__body {
+		width: 70%;
+	}
+
+	&__section {
+	}
+}
+.section-func {
+}
+.section {
+	margin-top: 5em;
+
+	&__title {
+		margin-bottom: 1.5em;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+		position: relative;
+
+		img {
+			border-radius: 0.3em;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&_centered {
+			margin: 0 1em;
+		}
+	}
+}
+.title {
+	font-family: "montserrat", sans-serif;
+	font-weight: bold;
+	color: s.$sectionTitleColor;
+	font-size: 1.625em;
+	text-align: center;
+}
+
+.title::first-letter {
+	text-transform: capitalize;
+}
+
+.item-func {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 1em;
+
+	&__flag {
+		font-family: "montserrat", sans-serif;
+		text-transform: uppercase;
+		background-color: s.$buttonColor;
+		border-radius: 2em;
+		color: s.$titleWhiteColor;
+		padding: 0.3em 1em;
+		display: inline-block;
+		text-align: center;
+		font-size: 0.625em;
+	}
+
+	&__subtitle {
+		font-family: "montserrat", sans-serif;
+		font-weight: bold;
+		font-size: 1.5em;
+		color: s.$titleWhiteColor;
+		margin: 1em 0;
+	}
+
+	&__text {
+		font-family: "roboto", sans-serif;
+		font-size: 0.875em;
+		line-height: 0.875em;
+		color: s.$funcTextColor;
+	}
+}
+.subtitle {
+}
+
+.main-section {
+}
+.section-partner {
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+		width: 20%;
+	}
+
+	&__button {
+		display: block;
+		margin: 2em auto 0 auto;
+		background-color: #fff;
+		color: s.$buttonColor;
+	}
+}
+.card-partner {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.card {
+	&__photo {
+		display: flex;
+		justify-content: center;
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	&__icon {
+	}
+
+	&__title {
+		text-decoration: none;
+		display: block;
+		font-family: "montserrat", sans-serif;
+		font-weight: bold;
+		color: s.$sectionTitleColor;
+		font-size: 0.875em;
+		text-align: center;
+		margin: 1em 0;
+	}
+
+	&__title:hover {
+		color: s.$buttonColor;
+	}
+
+	&__text {
+		font-family: "roboto", sans-serif;
+		font-size: 0.875em;
+		line-height: 0.875em;
+		text-align: center;
+		color: s.$partnerTextColor;
+	}
+
+	&__text::first-letter {
+		text-transform: capitalize;
+	}
+}
+.section-ideas {
+	&__gallery {
+	}
+
+	&__column {
+		position: relative;
+
+		img {
+			border-radius: 0.3em;
+			width: 100%;
+			height: 100%;
+			filter: brightness(80%);
+			transition: all 3s ease;
+		}
+
+		&_centered {
+			margin: 0 1em;
+		}
+
+		&_hovered:hover img {
+			opacity: 0;
+		}
+
+		&_hovered:hover {
+			background-image: url("../img/gallery/coliseum-2.png");
+		}
+	}
+
+	&__subtitle {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-family: "montserrat", sans-serif;
+		font-weight: bold;
+		font-size: 1.375em;
+		color: s.$titleWhiteColor;
+		text-align: center;
+	}
+
+	&__subtitle:hover {
+		cursor: pointer;
+	}
+}
+
+.gap {
+	margin: 1em 0;
+}
+
+.right {
+	margin-right: 1em;
+}
+.section-create {
+	&__text {
+		font-family: "roboto", sans-serif;
+		line-height: 0.875em;
+		font-size: 1.125em;
+		text-align: center;
+		color: s.$partnerTextColor;
+		margin: 1em 0;
+	}
+
+	::placeholder {
+		font-family: "roboto", sans-serif;
+		font-size: 0.875em;
+		color: s.$inputPlaceholderColor;
+	}
+
+	&__form {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 5em;
+
+		input {
+			padding: 0.5em 0 0.5em 1em;
+			border-radius: 0.3em;
+			width: 15em;
+			margin-right: 0.5em;
+			overflow: hidden;
+			border-color: s.$inputPlaceholderColor;
+		}
+	}
+
+	&__button {
+	}
+}
+
+.footer {
+	border-top: 0.15em solid s.$buttonColor;
+
+	&__row {
+		padding: 3em;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+		&_sided {
+		}
+
+		&_centered {
+		}
+	}
+
+	&__brand-link {
+		font-family: "montserrat", sans-serif;
+		color: s.$buttonColor;
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+
+	&__brand-link:hover {
+		font-weight: bold;
+	}
+
+	&__link {
+		font-family: "roboto", sans-serif;
+		line-height: 1.625em;
+		font-size: 0.875em;
+		color: s.$inputPlaceholderColor;
+	}
+
+	&__link:hover {
+		color: s.$buttonColor;
+		font-weight: bold;
+	}
+
+	&__list {
+	}
+
+	&__heading {
+		font-family: "montserrat", sans-serif;
+		font-weight: bold;
+		font-size: 0.875em;
+		text-transform: capitalize;
+		margin-bottom: 1em;
+	}
+
+	&__list-item {
+		margin: 0.5em 0;
+	}
+
+	&__text {
+		font-family: "montserrat", sans-serif;
+		font-weight: bold;
+		font-size: 0.625em;
+		color: s.$footerLogoText;
+		text-align: end;
+		margin-bottom: 0.5em;
+	}
+}
+
+// Medea queries
+@media only screen and (min-width: 600px) {
+	.section-partner {
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+			align-content: space-around;
+		}
+
+		&__column {
+			width: 50%;
+			margin-bottom: 2em;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.header {
+	
+		&__body {
+			width: 100%;
+		}
+	
+		&__menu {
+			justify-content: center;
+		}
+	
+		&__button {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.main {
+	
+		&__body {
+			width: 100%;
+		}
+	}
+
+	.section {
+	
+		&__title {
+			font-size: 2.5em;
+		}
+		
+		&__row {
+			display: block;
+		}
+		&__column {
+			position: relative;
+	
+			&_centered {
+				margin: 0;
+			}
+		}
+	}
+	.section-partner {
+		&__row {
+			display: block;
+		}
+	
+		&__column {
+			margin: 2em 0;
+			width: 100%;
+		}
+	
+		&__button {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.section-ideas {
+		&__column {
+			position: relative;
+	
+			&_centered {
+				margin: 0;
+			}
+	
+			&_hovered:hover img {
+				opacity: 0;
+			}
+	
+			&_hovered:hover {
+				background-image: url("../img/gallery/coliseum-2.png");
+			}
+		}
+	}
+	
+	.gap {
+		margin: 0;
+	}
+	
+	.right {
+		margin-right: 0;
+	}
+		
+	.section-create {
+	
+		&__form {
+			display: block;
+	
+			input {
+				padding: 0.5em 0;
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 1em;
+			}
+		}
+	
+		&__button {
+			display: block;
+			width: 100%;
+		}
+	}
+	.footer {
+	
+		&__row {
+			padding: 3em;
+			display: block;
+			width: 60%;
+		}
+	
+		&__column {
+			text-align: center;
+		}
+	
+		&__list {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+	
+		&__list-item {
+			margin: 0.5em 0;
+		}
+	
+		&__text {
+			text-align: center;
+		}
+	}
+}

@@ -11,81 +11,76 @@
     <div class="wrapper">
       <!-- Header -->
       <header class="header">
+        <img class="header__image" src="./img/Background.png" alt="Header background">
         <div class="header__body">
           <!-- Menu -->
-          <nav class="header__menu menu">
-            <ul class="menu__list">
-              <li class="menu__list-item">
-                <a href="#" class="menu__link link">dreamshare</a>
-              </li>
-              <li class="menu__list-item">
-                <a href="#" class="menu__link link">log in</a>
-              </li>
-              <li class="menu__list-item menu__list-item_bordered">
-                <a href="#" class="menu__link link">sign up</a>
-              </li>
-            </ul>
-          </nav>
+        <nav class="header__menu menu">
+          <a href="#" class="menu__link link head-link_branded">dreamshare</a>
+          <ul class="menu__list list">
+            <li class="menu__list-item">
+              <a href="#" class="menu__link link">log in</a>
+            </li>
+            <li class="menu__list-item menu__list-item_bordered">
+              <a href="#" class="menu__link link menu__link_bordered">sign up</a>
+            </li>
+          </ul>
+        </nav>
           <!-- Main text -->
+          <div class="header__box">
           <div class="header__title">share your holiday dream</div>
           <div class="header__text text">
             and find a perfect partner to fulfill it
           </div>
           <button class="header__button btn">find you holiday partner</button>
         </div>
+        </div>
       </header>
       <!-- Main -->
       <main class="main">
         <div class="main__body">
         <!-- Section functionality -->
-        <section class="main__section section-func">
+        <section class="main__section section-func section">
           <div class="section__title title">how dreamshare works?</div>
             <div class="section__row">
               <!-- Keyboard -->
               <div class="section__column">
+                <img src="./img/gallery/keyboard.png" alt="A man typing smth on a keyboard">
                 <div class="item-func">
                   <div class="item-func__flag">step 1</div>
                   <div class="item-func__subtitle subtitle">
-                    Lorem, ipsum dolor sit amet consectetur
+                    Sed leo enim, condimentum
                   </div>
                   <div class="item-func__text">
-                    adipisicing elit. Cum consectetur doloremque voluptatem
-                    voluptas rerum eaque asperiores quidem, enim corporis
-                    laborum odio natus qui? Porro ex nihil ratione, eaque
-                    dignissimos aliquam!
+                    Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
                   </div>
                 </div>
               </div>
               <!-- Cardrive -->
-              <div class="section__column">
+              <div class="section__column section__column_centered">
+                <img src="./img/gallery/driving_the_car.png" alt="Driving the car">
                 <div class="item-func">
                   <div class="item-func__flag">step 2</div>
-                  <div class="item-func__subtitle subtitle">Lorem ipsum dolor</div>
+                  <div class="item-func__subtitle subtitle">Morbi velit risus</div>
                   <div class="item-func__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nisi, veritatis eaque, minus ea at, sequi qui ducimus
-                    reprehenderit praesentium molestiae quasi ab dolores. Ullam
-                    fugiat eaque minima aspernatur voluptatem ut!
+                    Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
                   </div>
                 </div>
               </div>
               <!-- Beach -->
               <div class="section__column">
+                <img src="./img/gallery/on_the_beach.png" alt="On the beach">
                 <div class="item-func">
                   <div class="item-func__flag">step 3</div>
-                  <div class="item-func__subtitle subtitle">Voluptatum optio esse</div>
+                  <div class="item-func__subtitle subtitle">Sed leo enim, condimentum</div>
                   <div class="item-func__text">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Debitis velit ullam aliquid autem exercitationem esse?
-                    Expedita alias minima, nisi reiciendis, ad aliquid sunt
-                    porro cupiditate nulla eveniet nesciunt nihil facilis.
+                    Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
                   </div>
                 </div>
               </div>
             </div>
         </section>
         <!-- Section partners -->
-        <section class="main-section section-partner">
+        <section class="main-section section-partner section">
             <div class="section__title title">
               meet a partner for your best holiday
             </div>
@@ -102,9 +97,9 @@
                       <img src="./img/icons/note.png" alt="Musical note" />
                     </div>
                   </div>
-                  <div class="card__title">Bradley Hunter</div>
+                  <a class="card__title" href="#">Bradley Hunter</a>
                   <div class="card__text">
-                    based in chicago, i love playing tennis and loud music
+                    based in Chicago, I love playing tennis and loud music
                   </div>
                 </div>
               </div>
@@ -120,7 +115,7 @@
                       <img src="./img/icons/brush.png" alt="Painting brush" />
                     </div>
                   </div>
-                  <div class="card__title">Marie Bennett</div>
+                  <a class="card__title" href="#">Marie Bennett</a>
                   <div class="card__text">
                     Currently living in Colorado. Lover of art, languages and
                     travelling.
@@ -139,7 +134,7 @@
                       <img src="./img/icons/camera.png" alt="Photo camera" />
                     </div>
                   </div>
-                  <div class="card__title">Diana Wells</div>
+                  <a class="card__title" href="#">Diana Wells</a>
                   <div class="card__text">
                     Living in Athens, Greece. I love black and white classics,
                     chillout music and green tea.
@@ -158,7 +153,7 @@
                       <img src="./img/icons/airplane.png" alt="Airplane" />
                     </div>
                   </div>
-                  <div class="card__title">Christopher Pierce</div>
+                  <a class="card__title" href="#">Christopher Pierce</a>
                   <div class="card__text">
                     Star Wars fanatic. I have a persistent enthusiasm to create
                     new things.
@@ -169,7 +164,7 @@
             <button class="section-partner__button btn">see other partners</button>
         </section>
         <!-- Section gallery -->
-        <section class="main__section section-ideas">
+        <section class="main__section section-ideas section">
             <div class="section__title title">
               Discover holiday activity ideas
             </div>
@@ -180,7 +175,7 @@
                   <div class="section-ideas__subtitle subtitle">Sports and
                     Activities</div> 
                 </div>
-                <div class="section-ideas__column">
+                <div class="section-ideas__column section-ideas__column_centered">
                   <img src="./img/gallery/on_the_sun.png" alt="Wellness and Health" />
                   <div class="section-ideas__subtitle subtitle">Wellness and Health</div> 
                 </div>
@@ -190,19 +185,19 @@
                     Sports and Expeditions</div>
                 </div>
               </div>
-              <div class="section__row">
-                <div class="section-ideas__column">
+              <div class="section__row gap">
+                <div class="section-ideas__column right">
                   <img src="./img/gallery/gambling.png" alt="Games" />
-                  <div class="section-ideas__subtit subtitle">Games</div>
+                  <div class="section-ideas__subtitle subtitle">Games</div>
                 </div>
-                <div class="section-ideas__column">
+                <div class="section-ideas__column section-ideas__column_hovered">
                   <img src="./img/gallery/coliseum-1.png" alt="Culture and Education" />
                   <div class="section-ideas__subtitle subtitle">Culture and
                     Education</div> 
                 </div>
               </div>
               <div class="section__row">
-                <div class="section-ideas__column">
+                <div class="section-ideas__column right">
                   <img src="./img/gallery/massage.png" alt="Enjoyment and Relaxation" />
                   <div class="section-ideas__subtitle subtitle">Enjoyment and
                     Relaxation</div>
@@ -215,13 +210,13 @@
             </div>
         </section>
         <!-- Section create you activity -->
-        <section class="main__section section-create">
+        <section class="main__section section-create section">
             <div class="section__title title">create your holiday activity</div>
             <div class="section-create__text text">
               Hi! What are your holiday interests?
             </div>
             <div class="section-create__form">
-              <form action="#" method="post">
+              <form action="#" method="get">
                 <input type="text" placeholder="Enter your interests" />
                 <button class="section-create__button btn">
                   search partners
@@ -235,10 +230,11 @@
       <footer class="footer">
         <div class="footer__row">
           <div class="footer__column footer__column_sided">
-            <a href="" class="footer__link footer__link_branded">dreamshare</a>
+            <a href="#" class="footer__brand-link link">dreamshare</a>
           </div>
           <div class="footer__column footer__column_centered">
-            <ul class="footer__list">company
+            <div class="footer__heading">company</div>
+            <ul class="footer__list list">
               <li class="footer__list-item"><a href="#" class="footer__link link">about</a></li>
               <li class="footer__list-item"><a href="#" class="footer__link link">contact</a></li>
               <li class="footer__list-item"><a href="#" class="footer__link link">press</a></li>
@@ -248,10 +244,10 @@
             </ul>
           </div>
           <div class="footer__column footer__column_centered">
-            <p class="footer__list">partners</p>
+            <div class="footer__heading">partners</div>
           </div>
           <div class="footer__column footer__column_sided">
-            <p class="footer__text">designed by</p>
+            <div class="footer__text">designed by</div>
             <img src="./img/areto_logo.png" alt="Areto logo">
           </div>
         </div>
